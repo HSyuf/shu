@@ -71,6 +71,10 @@ html {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid--col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid-col-gap {
   column-gap: 3.2rem;
 }
