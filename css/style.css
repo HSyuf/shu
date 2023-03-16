@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 94vh;
+  height: 100vh;
   background-image: linear-gradient(
     to right,
     rgb(63, 43, 135),
@@ -174,6 +174,20 @@
 
 .section-feature {
   margin-bottom: 9.6rem;
+  position: relative;
+}
+
+.section-feature::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 9rem;
+  background-image: url(../img/edge-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  transform: translateY(-150%);
 }
 
 .feature-header {
@@ -568,6 +582,22 @@
 /* *********************** */
 /* section news */
 /* ************************** */
+.section-news {
+  position: relative;
+}
+
+.section-news::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 9rem;
+  background-image: url(../img/edge-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  transform: translateY(150%);
+}
 
 .news-header {
   text-align: center;
@@ -647,12 +677,12 @@
 .footer {
   /* background-image: url(../img/edge-2.png); */
   background-color: rgb(33, 71, 135);
-
   background-repeat: no-repeat;
   height: 56rem;
 }
 
 .action-box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -660,6 +690,7 @@
   background-color: #fff;
   height: 16rem;
   border-top: 3px solid rgb(121, 225, 212);
+  z-index: 1;
 }
 
 .btn-learn:link,
@@ -693,13 +724,16 @@
   top: 0;
   transform: translateX(-100%);
   transition: all 1s;
-  /* z-index: -1; */
 }
 
 .btn-learn:hover.btn-learn:link::after {
   transform: translateX(0);
 }
 
+.baobao {
+  position: relative;
+  z-index: 1;
+}
 .copyright-text {
   font-size: 1.4rem;
   color: #aaa;
@@ -747,14 +781,14 @@
 .list-link:link,
 .list-link:visited {
   text-decoration: none;
-  color: #fff;
+  color: #cfcfcf;
   font-size: 1.4rem;
   font-weight: 300;
 }
 
 .list-link:hover,
 .list-link:active {
-  color: rgb(65, 172, 243);
+  color: #f7f7f7;
 }
 
 .footer-list {
@@ -777,5 +811,5 @@
 
 .phone-num,
 .email-num {
-  color: #f7f7f7;
+  color: #cfcfcf;
 }
