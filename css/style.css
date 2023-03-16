@@ -548,3 +548,19 @@
   font-weight: 600;
   padding-right: 0.8rem;
 }
+
+.btn-box {
+  text-align: center;
+  margin-top: 1.6rem;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn {
+  color: rgb(8, 200, 175);
+  width: 4rem;
+}
