@@ -8,38 +8,41 @@
   );
 }
 
-.header::before {
-  content: "<";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 1%;
-  font-size: 2.2rem;
-  width: 4.4rem;
-  height: 4.4rem;
-  background-color: rgb(65, 172, 243);
-  color: #fff;
-  transform: translateY(-50%);
-  cursor: pointer;
+.header-fix {
+  padding-top: 8.4rem;
 }
 
-.header::after {
-  content: ">";
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header-above {
   position: absolute;
-  top: 50%;
-  right: 1%;
-  font-size: 2.2rem;
-  width: 4.4rem;
-  height: 4.4rem;
-  background-color: rgb(65, 172, 243);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+  position: absolute;
+  background-color: transparent;
   color: #fff;
+  border: 1px solid white;
+  font-size: 1.6rem;
+  padding: 1.2rem 1.4rem;
+  top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
+}
+
+.btn-main:hover {
+  background-color: rgb(66, 172, 243);
+  border: none;
+}
+
+.btn-main-left {
+  left: 1%;
+}
+
+.btn-main-right {
+  right: 1%;
 }
 
 .section-nav {
@@ -49,6 +52,32 @@
   justify-content: space-between;
   padding: 1.6rem 0;
   border-bottom: 1px solid #000;
+  transition: all 1s;
+}
+
+.container-nav {
+  position: relative;
+  display: flex;
+  max-width: 114rem;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-changer {
+  padding: 1.6rem 0;
+  transition: all 1s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.4rem 0;
+  border: none;
+  width: 100%;
+  background-color: #000;
+  z-index: 100;
 }
 
 .logo {
@@ -89,11 +118,12 @@
   opacity: 1;
 }
 
-.nav-hidden-box-link {
+.nav-hidden-box-link,
+.nav-link {
   color: #fff;
 }
 
-.nav-link {
+.nav-home {
   color: rgb(14, 186, 171);
 }
 
@@ -168,6 +198,121 @@
   width: 100%;
 }
 
+.appoint-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 58rem;
+  width: 26rem;
+  padding: 1.8rem;
+  background-color: rgb(0, 180, 176);
+  z-index: 1;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+
+.appoint-box-show {
+  transform: translateX(0);
+}
+
+.appoint-box-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  color: #fff;
+}
+
+.list-appoint {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.appoint-input,
+.appoint-input-area {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.appoint-input::placeholder,
+.appoint-input-area::placeholder {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.6rem;
+}
+
+.appoint-input-area {
+  resize: none;
+}
+
+.btn-appoint:link,
+.btn-appoint:visited {
+  display: inline-block;
+  position: relative;
+  color: rgb(0, 180, 176);
+  padding: 1rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 550;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.btn-appoint:link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 32, 32);
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.btn-appoint:hover.btn-appoint:link::after {
+  transform: translateX(0);
+}
+
+.appoint-info {
+  color: #f7f7f7;
+}
+
+.appoint-info-main {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.appoint-company:link,
+.appoint-company:visited {
+  font-size: 0.8rem;
+  margin-bottom: 0.9rem;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  transition: all 0.8s;
+}
+
+.appoint-company:hover,
+.appoint-company:active {
+  transform: translateX(30%);
+  text-decoration: underline;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+  transition: all 0 0.5s;
+}
 /* *********************** */
 /* section fecture */
 /* ************************** */
@@ -706,14 +851,6 @@
   background-color: rgb(249, 109, 73);
 }
 
-.baobao {
-  z-index: 10;
-}
-
-.btn-learn:hover,
-.btn-learn:active {
-}
-
 .btn-learn:link::after {
   content: "";
   position: absolute;
@@ -734,6 +871,7 @@
   position: relative;
   z-index: 1;
 }
+
 .copyright-text {
   font-size: 1.4rem;
   color: #aaa;

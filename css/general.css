@@ -13,6 +13,14 @@ html {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .grey-text {
   font-size: 1.6rem;
   line-height: 1.7;
@@ -63,12 +71,12 @@ html {
   display: grid;
 }
 
-.grid--col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .grid--col-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--col-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--col-4 {
