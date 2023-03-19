@@ -692,7 +692,15 @@
   padding-top: 8rem;
 }
 
+.respond-show {
+  position: relative;
+  max-width: 80rem;
+  height: 26rem;
+  overflow: hidden;
+}
+
 .client-respond {
+  position: absolute;
   display: inline-block;
   width: 36rem;
   height: 26rem;
